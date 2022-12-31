@@ -37,3 +37,11 @@
     width:100%;
     padding:2rem
 }
+
+.profile-content a{
+    color:#FFF
+}
+
+.profile-content a:hover{
+    color:#CCC
+}

@@ -25,8 +25,8 @@ const Footer =()=>{
 					<div class="footer-col">
 						<h4>Links</h4>
 						<ul>
-							<li><Link to="/register">Create an account</Link></li>
-							<li><Link to="/register">Login</Link></li>
+							<li><Link to="/signup">Create an account</Link></li>
+							<li><Link to="/login">Login</Link></li>
 						</ul>
 					</div>
                 	

@@ -142,7 +142,7 @@ function Signup() {
                   </FormGroup>
 
                     <button type="submit" className="btn">Signup</button>
-                    <p>I have an account. <Link to="/signup">Login</Link></p>
+                    <p>I have an account. <Link to="/login">Login</Link></p>
                 </Form>
             </Col>
             }

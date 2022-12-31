@@ -60,3 +60,11 @@
     text-align:center;
 
 }
+
+.footer a{
+    color:#FAFAFA
+}
+
+.footer a:hover{
+    color:#CCC
+}
