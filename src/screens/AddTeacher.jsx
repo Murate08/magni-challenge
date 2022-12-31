@@ -57,6 +57,19 @@ function AddTeacher() {
                  Name
                </Label>
              </FormGroup>
+             <FormGroup floating>
+               <Input
+                 id="name"
+                 name="name"
+                 placeholder="Name"
+                 type="text"
+                 value={registerNumber}
+                 onChange={(e)=> setRegisterNumber(e.target.value)}
+               />
+               <Label for="name">
+                 Name
+               </Label>
+             </FormGroup>
              
              {' '}
              <FormGroup>

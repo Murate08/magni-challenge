@@ -9,17 +9,36 @@
 }
 
 .detail img{
-    width:50px
+    width:50px;
+    border-radius:100%
 }
 
-.profile-content{
+
+.outher-info{
+  margin-top:5px
+
+}
+
+
+.profile-detail{
+padding:10px;
     justify-content:space-between;
     align-items:center;
     display:flex;
-    flex-direction:row
 }
 
-.outher-info{
-    margin:1rem
+.detail p{
+    color:#1f2421;
+}
 
+
+
+.footer-detail{
+    background:#1f2421;
+    padding:10px
+  
+}
+
+.footer-detail p{
+    color:#FFF
 }

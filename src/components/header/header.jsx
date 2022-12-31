@@ -9,7 +9,9 @@ function Header() {
   return (
     <header>
         <div className='header'>
-            <h1>Magni University</h1>
+            <Link to="/">
+              <h1>Magni University</h1>
+            </Link>
             <div className='profile-content'>
                 <h3>{currentUser? currentUser.displayName : <Link to="/login">Try to login</Link>}</h3>
                 <div className='img-profile'>

@@ -12,10 +12,11 @@ function AddStudent() {
   const navigate = useNavigate()
 
   const {currentUser} = useAuth()
-  const [name, setName] = useState('Antonio')
+  const [name, setName] = useState('')
   const [registerNumber, setRegisterNumber] = useState('')
   const [dateBirthDay, setDateBirthday] = useState('')
   const [curse, setCurse] = useState('')
+  const [degree, setDegree] = useState('')
   const [imageURL, setImageURL] = useState('')
 
   let {id} = useParams()
@@ -28,6 +29,7 @@ function AddStudent() {
         dateBirthDay:dateBirthDay,
         curse: curse,
         imageURL:imageURL,
+        degree,degree,
       });
     
       console.log("Success Student added");
@@ -112,6 +114,32 @@ function AddStudent() {
                     </option>
                     <option>
                       Game programming
+                    </option>
+                  </Input>
+                </FormGroup>
+                {''}
+                <FormGroup>
+                  <Label for="exampleSelectMulti">
+                    Select Degree
+                  </Label>
+                    <Input
+                      id="exampleSelect"
+                      name="select"
+                      type="select"
+                      value={degree}
+                      onChange={(e)=> setDegree(e.target.value)}
+                    >
+                    <option>
+                      Bachelor
+                    </option>
+                    <option>
+                      Graduation
+                    </option>
+                    <option>
+                      Licensure, 
+                    </option>
+                    <option>
+                      Undergraduate degree
                     </option>
                   </Input>
                 </FormGroup>

@@ -46,7 +46,7 @@ const Footer =()=>{
                     </div>
 					
                 </Col>
-                <p className="footer_copyright text-center">Copyright {year} CARROCELL. All rights reserved.</p>
+                <p className="footer_copyright text-center">Developed by Ayad OSsaile {year}.</p>
                
             </Row>
         </Container>
