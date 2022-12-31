@@ -9,6 +9,10 @@
     color:#ffc857
 }
 
+.header h3{
+    color:#FFF
+}
+
 .profile-content{
     display:flex;
     flex-direction:row;
@@ -17,12 +21,13 @@
 }
 
 .profile-content .img-profile{
-    width:150px;
-    height:150px;
+    width:100px;
+    height:100px;
     background:#FFF;
     justify-content:center;
     align-items:center;
-    display:flex
+    display:flex;
+    border-radius:5px
 }
 .profile-content .img-profile h3{
     color:#323031

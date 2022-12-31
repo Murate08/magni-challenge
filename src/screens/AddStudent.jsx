@@ -1,23 +1,57 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import { Form, Button, Container, FormGroup, Input, Label, Row } from 'reactstrap';
-
+import {addDoc, collection, doc, setDoc} from 'firebase/firestore'
+import {db} from '../firebase.config'
+import useAuth from '../custom-hooks/useAuth'
 import '../styles/add-student.css'
+import { useNavigate, useParams } from 'react-router-dom';
 
 function AddStudent() {
+
+  const navigate = useNavigate()
+
+  const {currentUser} = useAuth()
+  const [name, setName] = useState('Antonio')
+  const [registerNumber, setRegisterNumber] = useState('')
+  const [dateBirthDay, setDateBirthday] = useState('')
+  const [curse, setCurse] = useState('')
+  const [imageURL, setImageURL] = useState('')
+
+  let {id} = useParams()
+
+  const addStudent = async()=>{
+    try {
+      const docRef = await addDoc(collection(db, "students"), {
+        name: name,
+        registerNumber:registerNumber,
+        dateBirthDay:dateBirthDay,
+        curse: curse,
+        imageURL:imageURL,
+      });
+    
+      console.log("Success Student added");
+      navigate('/')
+    } catch (e) {
+      console.error("Error adding Student ", e);
+    }
+  }
+
   return(
     <section>
       <>
        <Container>
        <Row>
           <div className='form-content'>
-            <Form>
+            <Form onSubmit={addStudent} >
                 <FormGroup floating>
                   <Input
                     id="name"
                     name="name"
                     placeholder="Name"
                     type="text"
+                    value={name}
+                    onChange={(e)=> setName(e.target.value)}
                   />
                   <Label for="name">
                     Name
@@ -30,6 +64,8 @@ function AddStudent() {
                     name="number"
                     placeholder="Registration number"
                     type="number"
+                    value={registerNumber}
+                    onChange={(e)=> setRegisterNumber(e.target.value)}
                   />
                   <Label for="number">
                     Registration Number
@@ -43,6 +79,8 @@ function AddStudent() {
                       name="date"
                       placeholder="date placeholder"
                       type="date"
+                      value={dateBirthDay}
+                      onChange={(e)=> setDateBirthday(e.target.value)}
                     />
                     <Label for="exampleDate">
                       Date
@@ -57,6 +95,8 @@ function AddStudent() {
                       id="exampleSelect"
                       name="select"
                       type="select"
+                      value={curse}
+                      onChange={(e)=> setCurse(e.target.value)}
                     >
                     <option>
                       Choose a course
@@ -78,16 +118,18 @@ function AddStudent() {
                 {''}
                 <FormGroup>
                   <Label for="exampleFile">
-                   Profile Photo 
+                   URL Photo for Profile 
                   </Label>
                   <Input
                     id="exampleFile"
                     name="file"
-                    type="file"
+                    type="text"
+                    value={imageURL}
+                    onChange={(e)=> setImageURL(e.target.value)}
                   />
                 </FormGroup>
 
-                <Button className='btn'>
+                <Button onClick={addStudent}  className='btn'>
                   Add Student
                 </Button>
             </Form>
