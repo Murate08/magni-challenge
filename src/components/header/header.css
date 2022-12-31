@@ -1,0 +1,34 @@
+.header{
+    width:100%;
+    height:35vh;
+    background:#084c61;
+    padding:2rem
+}
+
+.header h1{
+    color:#ffc857
+}
+
+.profile-content{
+    display:flex;
+    flex-direction:row;
+    justify-content:space-between;
+    padding:2rem
+}
+
+.profile-content .img-profile{
+    width:150px;
+    height:150px;
+    background:#FFF;
+    justify-content:center;
+    align-items:center;
+    display:flex
+}
+.profile-content .img-profile h3{
+    color:#323031
+
+}
+.profile-content .img-profile img{
+    width:100%;
+    padding:2rem
+}
