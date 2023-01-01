@@ -37,9 +37,9 @@ const Footer =()=>{
                        <div class="footer-col">
 					   <h4>Follow me</h4>
 							<div class="social-links">
-								<a href="https://www.facebook.com/profile.php?id=100088430733778"><i class="ri-github-fill"></i></a>
-								<a href="https://www.instagram.com/carrocell__"><i class="ri-whatsapp-fill"></i></a>
-								<a href="https://www.linkedin.com/feed/?trk=onboarding-landing"><i class="ri-linkedin-fill"></i></a>
+								<a target="_blank" href="https://github.com/Murate08"><i class="ri-github-fill"></i></a>
+								<a target="_blank"  href={`https://wa.me/${+258877613085}`}><i class="ri-whatsapp-fill"></i></a>
+								<a  target="_blank" href="https://www.linkedin.com/in/ayad-ossaile-135341222/"><i class="ri-linkedin-fill"></i></a>
 							</div>
 						</div>
 						

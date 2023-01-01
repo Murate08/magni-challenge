@@ -42,3 +42,21 @@ padding:10px;
 .footer-detail p{
     color:#FFF
 }
+
+.btn_filter{
+    border:none;
+    background:none;
+    width:100%
+}
+
+.toggle{
+    width:350px
+}
+
+
+@media only screen and ( max-width:786px){
+    .toggle{
+        width:100%
+    }
+
+}

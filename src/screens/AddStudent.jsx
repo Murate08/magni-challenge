@@ -31,12 +31,22 @@ function AddStudent() {
         imageURL:imageURL,
         degree,degree,
       });
-    
+   
       console.log("Success Student added");
       navigate('/')
+   
     } catch (e) {
       console.error("Error adding Student ", e);
     }
+
+    const docRef = await addDoc(collection(db, `${curse}`), {
+      name: name,
+      registerNumber:registerNumber,
+      dateBirthDay:dateBirthDay,
+      curse: curse,
+      imageURL:imageURL,
+      degree:degree,
+    });
   }
 
   return(
@@ -129,6 +139,9 @@ function AddStudent() {
                       value={degree}
                       onChange={(e)=> setDegree(e.target.value)}
                     >
+                    <option>
+                      Choose a Degree
+                    </option>
                     <option>
                       Bachelor
                     </option>

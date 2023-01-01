@@ -12,12 +12,13 @@ function AddTeacher() {
   const navigate = useNavigate()
 
   const {currentUser} = useAuth()
-  const [name, setName] = useState('Antonio')
+  const [name, setName] = useState('')
   const [registerNumber, setRegisterNumber] = useState('')
   const [dateBirthDay, setDateBirthday] = useState('')
   const [curse, setCurse] = useState('')
   const [salary, setSalary] = useState('')
   const [imageURL, setImageURL] = useState('')
+  const [degree, setDegree] = useState('')
 
   let {id} = useParams()
 
@@ -30,6 +31,7 @@ function AddTeacher() {
         curse: curse,
         imageURL:imageURL,
         salary:salary,
+        degree:degree
       });
     
       console.log("Success Teacher added");
@@ -37,6 +39,15 @@ function AddTeacher() {
     } catch (e) {
       console.error("Error adding Teacher ", e);
     }
+    const docRef = await addDoc(collection(db, `${degree}`), {
+      name: name,
+      registerNumber:registerNumber,
+      dateBirthDay:dateBirthDay,
+      curse: curse,
+      imageURL:imageURL,
+      salary:salary,
+      degree:degree
+    });
   }
 
   return(
@@ -59,15 +70,15 @@ function AddTeacher() {
              </FormGroup>
              <FormGroup floating>
                <Input
-                 id="name"
-                 name="name"
-                 placeholder="Name"
-                 type="text"
+                 id="registerNumber"
+                 name="registerNumber"
+                 placeholder="Registation Number"
+                 type="number"
                  value={registerNumber}
                  onChange={(e)=> setRegisterNumber(e.target.value)}
                />
-               <Label for="name">
-                 Name
+               <Label for="registerNumber">
+                Registation Number
                </Label>
              </FormGroup>
              
@@ -87,14 +98,14 @@ function AddTeacher() {
              {' '}
              <FormGroup floating>
                <Input
-                 id="name"
-                 name="name"
-                 placeholder="Name"
+                 id="salary"
+                 name="salary"
+                 placeholder="Salary"
                  type="text"
                  value={salary}
                  onChange={(e)=> setSalary(e.target.value)}
                />
-               <Label for="name">
+               <Label for="salary">
                  Salary
                </Label>
              </FormGroup>
@@ -120,7 +131,7 @@ function AddTeacher() {
                    Software Engineering
                  </option>
                  <option>
-                   Project management
+                   Project Management
                  </option>
                  <option>
                    Game programming
@@ -128,6 +139,35 @@ function AddTeacher() {
                </Input>
              </FormGroup>
              {''}
+             <FormGroup>
+                  <Label for="exampleSelectMulti">
+                    Select Degree
+                  </Label>
+                    <Input
+                      id="exampleSelect"
+                      name="select"
+                      type="select"
+                      value={degree}
+                      onChange={(e)=> setDegree(e.target.value)}
+                    >
+                    <option>
+                    Choose a degree
+                    </option>
+                    <option>
+                      Bachelor
+                    </option>
+                    <option>
+                      Graduation
+                    </option>
+                    <option>
+                      Licensure
+                    </option>
+                    <option>
+                      Undergraduate Degree
+                    </option>
+                  </Input>
+                </FormGroup>
+                {''}
              <FormGroup>
                   <Label for="exampleFile">
                    URL Photo for Profile 

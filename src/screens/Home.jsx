@@ -2,7 +2,7 @@ import React from 'react';
 import { Col, Container, Row } from 'reactstrap';
 import student from '../assets/img/student.png'
 import teacher from '../assets/img/teacher.png'
-
+import {motion} from 'framer-motion'
 import univer from '../assets/img/univer.png'
 import '../styles/home.css'
 import { Link } from 'react-router-dom';
@@ -14,28 +14,28 @@ function Home() {
             <Row>
                 <Col  lg="4">
                     <Link to="/all-data">
-                        <div className='button-content'>
+                        <motion.div   whileTap={{scale:1.2}}    className='button-content'>
                            University
                            <img src={univer}/>
-                        </div>
+                        </motion.div>
                         </Link>
                     </Col>
                 
                 
                 <Col  lg="4">
                     <Link to="/add-student">
-                        <div className='button-content'>
+                        <motion.div   whileTap={{scale:1.2}}    className='button-content'>
                             Add Student
                             <img src={student}/>
-                        </div>
+                        </motion.div>
                     </Link>
                 </Col>
                 <Col  lg="4">
                     <Link to="/add-teacher">
-                        <div className='button-content'>
+                        <motion.div   whileTap={{scale:1.2}}    className='button-content'>
                             Add Teacher
                             <img src={teacher}/>
-                        </div>
+                        </motion.div>
                     </Link>
                 </Col>
                 

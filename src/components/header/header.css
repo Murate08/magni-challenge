@@ -45,3 +45,30 @@
 .profile-content a:hover{
     color:#CCC
 }
+
+.btn-logout{
+    border:none;
+    background:#1f2421;
+    color:#FFF;
+    padding:10px;
+    justify-content:center;
+    align-items:center;
+    display:flex;
+    margin-top:2rem;
+    width:150px;
+    border-radius:5px
+
+}
+
+.top-header p{
+    color:#FAFAFA
+}
+
+
+@media only screen and ( max-width:786px){
+    .profile-content .img-profile{
+        width:80px;
+        height:80px;
+     
+    }
+}
