@@ -3,14 +3,14 @@
 This is a technical project for a university website, in order to understand my coding style, creative solution, use of standards and best practices.
 
 ## For this project I used the technologies:
-### React;
-### Firebase;
-### react-redux;
-### react-router-dom;
-### reactstrap;
-### remixicon;
-### framer-motion;
-### bootstrap;
+#### React;
+#### Firebase;
+#### react-redux;
+#### react-router-dom;
+#### reactstrap;
+#### remixicon;
+#### framer-motion;
+#### bootstrap;
 
 
 
@@ -19,18 +19,18 @@ This is a technical project for a university website, in order to understand my 
 ## To access the project, use the link below:
  Link here?
 
-## If you want to run porjetco on a personal machine, the repository is available to the public, being able to clone and install the dependencies in the project directory.
+If you want to run porjetco on a personal machine, the repository is available to the public, being able to clone and install the dependencies in the project directory.
 
 ### `npm install` 
 
 
 
 
-# The application has a university management interface:
-## Where we can access the user registration;
-## See all students and filter by course; 
-## See all teachers and filter by academic degree;
-## Add a student as well as add a teacher;
+ The application has a university management interface:
+ Where we can access the user registration;
+ See all students and filter by course; 
+ See all teachers and filter by academic degree;
+ Add a student as well as add a teacher;
 
 
 
