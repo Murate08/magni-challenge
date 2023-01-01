@@ -15,7 +15,7 @@ function Home() {
                 <Col  lg="4">
                     <Link to="/all-data">
                         <motion.div   whileTap={{scale:1.2}}    className='button-content'>
-                           University
+                           <h5>University</h5>
                            <img src={univer}/>
                         </motion.div>
                         </Link>
@@ -25,7 +25,7 @@ function Home() {
                 <Col  lg="4">
                     <Link to="/add-student">
                         <motion.div   whileTap={{scale:1.2}}    className='button-content'>
-                            Add Student
+                            <h5>Add Student</h5>
                             <img src={student}/>
                         </motion.div>
                     </Link>
@@ -33,7 +33,7 @@ function Home() {
                 <Col  lg="4">
                     <Link to="/add-teacher">
                         <motion.div   whileTap={{scale:1.2}}    className='button-content'>
-                            Add Teacher
+                            <h5>Add Teacher</h5>
                             <img src={teacher}/>
                         </motion.div>
                     </Link>

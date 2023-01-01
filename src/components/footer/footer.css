@@ -9,15 +9,18 @@
 .footer_text{
     line-height:30px;
     color:#fafafa;
+    font-family: 'Raleway', sans-serif;
 }
 
 .footer_quick-links ul li{
     background:transparent !important;
+    font-family: 'Ubuntu Mono', monospace;
     
 }
 
 .footer_quick-links a{
-    margin:0.5rem
+    margin:0.5rem;
+    font-family: 'Raleway', sans-serif;
 }
 
 

@@ -6,18 +6,25 @@
 }
 
 .header h1{
-    color:#ffc857
+    color:#ffc857;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+.top-header p{
+    color:#FAFAFA;
+    font-family: 'Ubuntu Mono', monospace;
 }
 
+
 .header h3{
-    color:#FFF
+    color:#FFF;
+    font-family: 'Raleway', sans-serif;
 }
 
 .profile-content{
     display:flex;
     flex-direction:row;
     justify-content:space-between;
-    padding:2rem
+     margin-top:1.5rem
 }
 
 .profile-content .img-profile{
@@ -60,9 +67,6 @@
 
 }
 
-.top-header p{
-    color:#FAFAFA
-}
 
 
 @media only screen and ( max-width:786px){

@@ -10,7 +10,7 @@ import { useParams } from 'react-router-dom';
 
 function Teacher() {
     const [teacher, setTeacher] = useState([])
-    const [filterCurse, setFilterCurse] = useState([])
+    const [filterDegree, setFilterDregree] = useState([])
     
   let {id} = useParams()
 
@@ -29,8 +29,8 @@ function Teacher() {
   const handleFindBachelor =  async () =>{
     const getCurse = async()=>{
       const data =  await getDocs(BachelorRef)
-      setFilterCurse(data.docs.map((doc)=>({...doc.data(), id:doc.id})))
-      console.log(filterCurse)
+      setFilterDregree(data.docs.map((doc)=>({...doc.data(), id:doc.id})))
+      console.log(filterDegree)
      
   }
     getCurse()
@@ -40,8 +40,8 @@ const graduationRef= collection(db, 'Graduation'  )
 const handleFindGraduation =  async () =>{
   const getCurse = async()=>{
     const data =  await getDocs(graduationRef)
-    setFilterCurse(data.docs.map((doc)=>({...doc.data(), id:doc.id})))
-    console.log(filterCurse)
+    setFilterDregree(data.docs.map((doc)=>({...doc.data(), id:doc.id})))
+    console.log(filterDegree)
    
 }   
     getCurse()
@@ -52,8 +52,8 @@ const licensureRef= collection(db, 'Licensure'  )
 const handleFindLicensure =  async () =>{
   const getCurse = async()=>{
     const data =  await getDocs(licensureRef)
-    setFilterCurse(data.docs.map((doc)=>({...doc.data(), id:doc.id})))
-    console.log(filterCurse)
+    setFilterDregree(data.docs.map((doc)=>({...doc.data(), id:doc.id})))
+    console.log(filterDegree)
    
 }   
     getCurse()
@@ -64,8 +64,8 @@ const undergraduateRef = collection(db, 'Undergraduate Degree'  )
 const handleFindUndergraduate =  async () =>{
   const getCurse = async()=>{
     const data =  await getDocs(undergraduateRef)
-    setFilterCurse(data.docs.map((doc)=>({...doc.data(), id:doc.id})))
-    console.log(filterCurse)
+    setFilterDregree(data.docs.map((doc)=>({...doc.data(), id:doc.id})))
+    console.log(filterDegree)
    
 }   
     getCurse()
@@ -106,24 +106,24 @@ const handleFindUndergraduate =  async () =>{
             </UncontrolledDropdown>
         </div>
         <Row>
-            {filterCurse.map((student)=> {
+            {filterDegree.map((teacher)=> {
                 return(
                     <Col lg="3">
                         <div className='detail'>
                             <div className='profile-detail'>
-                                <h4>{student.name}</h4>
-                                <img src={student.imageURL}/>
+                                <h4>{teacher.name}</h4>
+                                <img src={teacher.imageURL}/>
                             </div>
                             <div className='outher-info'>
-                                <p>{student.curse}</p>
-                                <p>{student.dateBirthDay}</p>
-                                <p>{student.degree}</p>
-                                <p>{student.salary} €</p>
+                                <p>{teacher.curse}</p>
+                                <p>{teacher.dateBirthDay}</p>
+                                <p>{teacher.degree}</p>
+                                <p>{teacher.salary} €</p>
 
                             </div>
                             </div>
                             <div className='footer-detail'>
-                                <p className='text-center'>{student.registerNumber}</p>
+                                <p className='text-center'>{teacher.registerNumber}</p>
                             </div>
                     </Col>
                 )
@@ -131,25 +131,25 @@ const handleFindUndergraduate =  async () =>{
         </Row>
             <Row>
                 <h2 className='mt-5'>All Teachers</h2>
-                {teacher.map((student)=> {
+                {teacher.map((teacher)=> {
                     return(
                         <Col lg="3">
                             <div className='detail'>
                                 <div className='profile-detail'>
-                                    <h4>{student.name}</h4>
-                                    <img src={student.imageURL}/>
+                                    <h4>{teacher.name}</h4>
+                                    <img src={teacher.imageURL}/>
                                 </div>
                                 <div className='outher-info'>
-                                    <p>{student.curse}</p>
-                                    <p>{student.dateBirthDay}</p>
-                                    <p>{student.degree}</p>
-                                    <p>{student.salary} €</p>
+                                    <p>{teacher.curse}</p>
+                                    <p>{teacher.dateBirthDay}</p>
+                                    <p>{teacher.degree}</p>
+                                    <p>{teacher.salary} €</p>
 
                                 </div>
                             
                             </div>
                             <div className='footer-detail'>
-                                <p className='text-center'>{student.registerNumber}</p>
+                                <p className='text-center'>{teacher.registerNumber}</p>
                             </div>
                         </Col>
                    )

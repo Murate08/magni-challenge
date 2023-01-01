@@ -27,7 +27,7 @@ function Students() {
     const getCurse = async()=>{
       const data =  await getDocs(softwareRef)
       setFilterCurse(data.docs.map((doc)=>({...doc.data(), id:doc.id})))
-      console.log(filterCurse)
+      
      
   }
     getCurse()
@@ -38,7 +38,7 @@ const handleFindGame =  async () =>{
   const getCurse = async()=>{
     const data =  await getDocs(programmingRef)
     setFilterCurse(data.docs.map((doc)=>({...doc.data(), id:doc.id})))
-    console.log(filterCurse)
+    
    
 }   
     getCurse()
@@ -50,8 +50,7 @@ const handleFindmanagement =  async () =>{
   const getCurse = async()=>{
     const data =  await getDocs(managementRef)
     setFilterCurse(data.docs.map((doc)=>({...doc.data(), id:doc.id})))
-    console.log(filterCurse)
-   
+    
 }   
     getCurse()
   
@@ -62,7 +61,7 @@ const handleFindComputing =  async () =>{
   const getCurse = async()=>{
     const data =  await getDocs(computingRef)
     setFilterCurse(data.docs.map((doc)=>({...doc.data(), id:doc.id})))
-    console.log(filterCurse)
+   
    
 }   
     getCurse()

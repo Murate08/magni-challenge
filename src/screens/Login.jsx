@@ -30,14 +30,14 @@ function Login() {
 
           const user = userCredential.user
 
-          console.log(user)
+          window.alert(user)
           setLoading(false)
-          console.log('Logado com sucesso')
+          window.alert('Logado com sucesso')
           navigate('/')
 
       }catch(error){
           setLoading(false)
-          console.log(error.message)
+          window.alert(error.message)
       }
   }
 

@@ -68,11 +68,11 @@ function Signup() {
         
         setLoading(false)
 
-        console.log("Conta criada com sucesso")
+        window.alert("Conta criada com sucesso")
         navigate('/login')
 
     }catch(error){
-        console.log("Alguma coisa esta errada!")
+        window.alert("Alguma coisa esta errada!")
     }
 }
 

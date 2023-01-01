@@ -6,13 +6,13 @@ import student from '../assets/img/student.png'
 import teacher from '../assets/img/teacher.png'
 function GetAllData() {
   return(
-    <section className='home-container'>
+    <section className='buttons-container mt-3'>
         <Container>
             <Row>  
                 <Col  lg="6">
                     <Link to="/student">
                         <div className='button-content'>
-                            See Student
+                            <h5>See Student</h5>
                             <img src={student}/>
                         </div>
                     </Link>
@@ -20,7 +20,7 @@ function GetAllData() {
                 <Col  lg="6">
                     <Link to="/teacher">
                         <div className='button-content'>
-                            See Teacher
+                            <h5>See Teacher</h5>
                             <img src={teacher}/>
                         </div>
                     </Link>

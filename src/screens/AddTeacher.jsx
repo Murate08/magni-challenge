@@ -34,10 +34,10 @@ function AddTeacher() {
         degree:degree
       });
     
-      console.log("Success Teacher added");
+      window.alert("Success Teacher added");
       navigate('/')
     } catch (e) {
-      console.error("Error adding Teacher ", e);
+      window.alert("Error adding Teacher ", e);
     }
     const docRef = await addDoc(collection(db, `${degree}`), {
       name: name,

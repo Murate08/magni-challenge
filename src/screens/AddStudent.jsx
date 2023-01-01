@@ -6,6 +6,7 @@ import {db} from '../firebase.config'
 import useAuth from '../custom-hooks/useAuth'
 import '../styles/add-student.css'
 import { useNavigate, useParams } from 'react-router-dom';
+import {toast} from 'react-toastify'
 
 function AddStudent() {
 
@@ -32,11 +33,11 @@ function AddStudent() {
         degree,degree,
       });
    
-      console.log("Success Student added");
+      window.alert("Success Student added");
       navigate('/')
    
     } catch (e) {
-      console.error("Error adding Student ", e);
+      window.alert("Error adding Student ", e);
     }
 
     const docRef = await addDoc(collection(db, `${curse}`), {
@@ -149,7 +150,7 @@ function AddStudent() {
                       Graduation
                     </option>
                     <option>
-                      Licensure, 
+                      Licensure
                     </option>
                     <option>
                       Undergraduate degree
