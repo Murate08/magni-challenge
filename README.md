@@ -17,7 +17,7 @@ This is a technical project for a university website, in order to understand my 
 
 
 ## To access the project, use the link below:
--- https://sweet-centaur-cd6c40.netlify.app
+-- https://peaceful-gelato-2037a5.netlify.app/
 
 If you want to run porjetco on a personal machine, the repository is available to the public, being able to clone and install the dependencies in the project directory.
 

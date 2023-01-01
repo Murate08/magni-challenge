@@ -27,48 +27,48 @@ function Teacher() {
 
   const BachelorRef = collection(db, 'Bachelor'  )
   const handleFindBachelor =  async () =>{
-    const getCurse = async()=>{
+    const getDegree = async()=>{
       const data =  await getDocs(BachelorRef)
       setFilterDregree(data.docs.map((doc)=>({...doc.data(), id:doc.id})))
       console.log(filterDegree)
      
   }
-    getCurse()
+    getDegree()
     
   }
 const graduationRef= collection(db, 'Graduation'  )
 const handleFindGraduation =  async () =>{
-  const getCurse = async()=>{
+  const getDegree = async()=>{
     const data =  await getDocs(graduationRef)
     setFilterDregree(data.docs.map((doc)=>({...doc.data(), id:doc.id})))
     console.log(filterDegree)
    
 }   
-    getCurse()
+    getDegree()
   
 }
 
 const licensureRef= collection(db, 'Licensure'  )
 const handleFindLicensure =  async () =>{
-  const getCurse = async()=>{
+  const getDegree = async()=>{
     const data =  await getDocs(licensureRef)
     setFilterDregree(data.docs.map((doc)=>({...doc.data(), id:doc.id})))
     console.log(filterDegree)
    
 }   
-    getCurse()
+    getDegree()
   
 }
 
 const undergraduateRef = collection(db, 'Undergraduate Degree'  )
 const handleFindUndergraduate =  async () =>{
-  const getCurse = async()=>{
+  const getDegree = async()=>{
     const data =  await getDocs(undergraduateRef)
     setFilterDregree(data.docs.map((doc)=>({...doc.data(), id:doc.id})))
     console.log(filterDegree)
    
 }   
-    getCurse()
+    getDegree()
   
 }
   return (
